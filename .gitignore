@@ -1,0 +1,7 @@
+node_modules/
+.env
+.env.*
+!.env.example
+arduino_secrets.h
+*.pem
+*.key

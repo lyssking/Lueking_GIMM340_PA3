@@ -1,10 +1,9 @@
 #include <WiFiNINA.h>
+#include "arduino_secrets.h"
 
-//char ssid[] = "GIMM-Lab";
-//char pass[] = "34cP0WwMjdKB71";
 
-char ssid[] = "pretty_fly_4a_wifi";
-char pass[] = "lukaang2016";
+char ssid[] = SECRET_SSID;
+char pass[] = SECRET_PASS;
 
 char server[] = "18.226.72.30";
 const int SERVER_PORT = 3000;

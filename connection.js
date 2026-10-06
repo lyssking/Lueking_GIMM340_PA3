@@ -1,4 +1,10 @@
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '.env'), quiet: true });
 const mysql = require('mysql2/promise');
+
+for (const name of ['DB_HOST', 'DB_USER', 'DB_PASSWORD', 'DB_NAME']) {
+    if (!process.env[name]) throw new Error(`Missing database setting: ${name}`);
+}
 
 let connection = null;
 
@@ -8,10 +14,11 @@ async function getConnection() {
     }
 
     connection = await mysql.createConnection({
-        host: "db-gimm340pa3.cfuyk8gkaz8v.us-east-2.rds.amazonaws.com",
-        user: "admin",
-        password: "notpassword",
-        database: 'arduino_data'
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_NAME,
+        port: Number(process.env.DB_PORT || 3306)
     });
 
     return connection;
