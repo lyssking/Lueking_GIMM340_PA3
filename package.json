@@ -2,12 +2,21 @@
   "name": "express",
   "version": "1.0.0",
   "description": "",
+  "homepage": "https://github.com/lyssking/Lueking_GIMM340_PA3#readme",
+  "bugs": {
+    "url": "https://github.com/lyssking/Lueking_GIMM340_PA3/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyssking/Lueking_GIMM340_PA3.git"
+  },
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
-    "express": "^5.2.1"
+    "express": "^5.2.1",
+    "mysql2": "^3.24.5"
   }
 }
