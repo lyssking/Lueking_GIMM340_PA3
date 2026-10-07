@@ -1,3 +1,0 @@
-#pragma once
-#define SECRET_SSID "YOUR_WIFI_NAME"
-#define SECRET_PASS "YOUR_WIFI_PASSWORD"
